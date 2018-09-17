@@ -1,0 +1,11 @@
+1.la sintaxis de cd para llegar a practica02.txt /home/eduardo/Documentos/abelsantillan/practicas/resources, es decir, en la ruta absoluta no importa donde nos encontremos siempre sera "absoluta" para llegar a algun directorio porque a un archivo no se puede acceder.
+Mientras que en la ruta relativa depende de el lugar donde nos encontremos si nos encontramos en la carpeta resources y queremos llegar a documentos bastara con escribir cd ../../../ asi llegaremos a Documentos pero si estamos en practicas y queremos llegar a Documentos  basta con poner cd ../../, como vemos la ruta relativa siempre va a depender de el lugar donde nos encontremos moentras que la absoluta no.
+
+2.El enlace simbólico no contiene la informacion dell archivo solamente apunta al lugar donde se encuentran los datos, para crearlo se ejecuta ln -s practica02.txt practica02.
+
+5.UNIX no almacena la fecha de creación de los archivos, solamente se puede buscar por la fecha de modificación, en este caso para buscar directorios de el año  2017 es touch --date "2017-01-01 00:00:00" /tmp/inicio touch --date "2017-12-31 23:59:59" /tmp/fin y por ultimo find /bin -type f -newer /tmp/inicio -not -newer /tmp/fin,(-type f) nos señala que es un archivo, si queremos un directorio en esta fecha solamente bastara (-type d), find /bin nos dice que es en la carpeta bin
+
+6.la corrección del código es en la línea 15 (String [] args), en la línea 18 falta el ; de "Corrigiendo código", en la línea 19 int i = uno no puede recibir una cadena, bastara con poner 1 y correra, de igual forma en la linea 20 char a no puede recibir una cadena como "b" basta con poner de igual forma 1,
+los errores se clasifican sintácticos, de ejecución y lógicos:
+errores SINTÁCTICOS se producen al escribir, incorrectamente, alguna parte del código como en la línea 15 y la línea 18, de EJECUCIÓN ocurren cuando en el programa se intenta una operacion que es imposible llevarse acabo , por ejemplo, pasar cadenas donde deben almacenarse numeros como en la linea 19 y 20, LÓGICOS compila y se ejecuta el programa pero no nos devuelve el resulado esperado, por ejemplo, que sea una operacion de 5*4 y nos de como resultado 10. 
+
